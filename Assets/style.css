@@ -1,0 +1,75 @@
+/* Google fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Island+Moments&display=swap');
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: #007bff;
+}
+
+.start_btn,
+    .info_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%. -50%);
+}
+
+/*Start Quiz Button Styling */
+.start_btn button{
+    font-size: 25px;
+    font-weight: 500;
+    color: #007bff;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+}
+
+.info_box{
+    width: 540px;
+    background: white;
+    border-radius: 5px;
+}
+
+.info_box .info_title{
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    padding: 0 35px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.info_box .info_list{
+    padding: 15px 35px;
+}
+
+.info_box .info_list .info{
+    margin: 5px 0;
+    font-size: 17px;
+}
+
+.info_box .info_list .info span{
+    font-weight: 600;
+    color: #007bff;
+}
+
+.info_box .buttons{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    border-top: 1px solid lightgrey;
+}
+
+.info_box .buttons
