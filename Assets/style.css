@@ -110,6 +110,8 @@ body{
 }
 
 .quiz_box header{
+    position: relative;
+    z-index: 99;
     height: 70px;
     padding: 0 30px;
     background: #fff;
@@ -132,4 +134,31 @@ body{
     width: 145px;
     height: 45px;
     background: #cce;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.quiz_box header .timer .time_text{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.quiz_box header .timer .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    background: #343a40;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.quiz_box .section{
+    padding: 25px 30px 20px 30px;
 }
