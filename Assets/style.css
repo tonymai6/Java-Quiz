@@ -161,4 +161,37 @@ body{
 
 .quiz_box .section{
     padding: 25px 30px 20px 30px;
+    background: #fff;
+}
+
+.quiz_box section .que_text{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.quiz_box section .option_list{
+    padding: 20px 0;
+    display: block;
+}
+
+.quiz_box section .option_list .option{
+    background: aliceblue;
+    border: 1px solid #84c5fe;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+section .option_list .option:hover{
+    color: #004085;
+    background: #cce5ff;
+    border-color: #b8daff;
+}
+.option_list .option:last-child{
+    margin-bottom: 0px;
 }
