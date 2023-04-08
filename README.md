@@ -11,6 +11,7 @@
 - npm install
 
 ## Deployed Link: 
+https://tonymai6.github.io/Java-Quiz/
 
 ## Screenshot:
 
