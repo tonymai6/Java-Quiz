@@ -3,72 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App | Tony</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/c6389c3c35.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Tony's Code Quiz</title>
 </head>
 
 <body>
-  <div class="start_btn"><button>Start Quiz</button></div>
+    <header>
+    <!-- Display high score and timer on top left and right corners respectively -->
+    <section id = "score_keeper" style="display: none">
+        <input type="button" value="View High Scores" onclick="view_high_scores()"></br>
+        Score: <var id="score"> </var>
+    </section>
+
+    <section id= "countdownTimer" style="display: none">
+        Time Remaining: <span id="timer"></span>
+    </section>
+
+    </header>
+
+
+    <!-- Home Container with quiz rules and Start button -->
+    <container>
+        <div id="homeContainer" class="none">
+            <h1>Welcome to the Code Quiz!</h1>
+            <p>Test your coding knowledge with our timed quiz. You have 75 seconds to answer as many code-related questions as you can.</p> 
+            <p> Be careful! For each incorrect answer, you will be penalized 5 seconds from the timer. If the timer hits 0, the quiz is over!</p>
+            <p><strong>Ready to put your coding skills to the test? Let's get started!</strong></p>
+            <br>
+            <button id="startBtn">Start Quiz</button>
+        </div>
+    </container>
     
-    <!-- Info Box -->
-    <div class="info_box">
-        <div class="info_title">
-            <span>Some Rules of this Quiz</span>
-        </div>
-        <div class="info_list">
-            <div class="info">1. You will only <span>15 seconds</span> per each question.</div>
-            <div class="info">2. Once you select your answer, you can't reselect.</div>
-            <div class="info">3. You can't select any option once time goes off.</div>
-            <div class="info">4. You can't exit from the Quiz while you're playing.</div>
-            <div class="info">5. You'll get points on the basis of your correct answers. </div>
-        </div>
-        <div class="buttons">
-            <button class="quit">Exit Quiz</button>
-            <button class="restart">Continue</button>
-    </div>
+    
+    
+
+        <!-- QUIZ CONTAINER -->
+        <div id="quizContainer" style="display: none"> 
+            <h2 id="questionHeading"></h2>
+            <!-- <div id="answerChoices"> -->
+                <ul>
+                    <div id="choices">
+                        <button id="answerChoiceA"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoiceB"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoiceC"></button>
+                    </div>
+                    <div>
+                        <button id="answerChoiceD"></button>
+                    </div>
+                </ul>
+            </div>
 </body>
 
-<!-- Quiz Box -->
-    <div class="quiz_box">
-        <header>
-            <div class="title">Quiz Application</div>
-            <div class="timer">
-                <div class="time_text">Time Left</div>
-                <div class="timer_sec">15</div>
-            </div> 
-        </header>
-        <section>
-            <div class="que_text">
-                <span>Who created JavaScript language?</span>
-            </div>
-            <div class="option_list">
-                <div class="option">
-                    <span>Brendan Eich</span>
-                    <div class="icon tick"><i class="fas fa-check"></i></div>
-                </div>
-                <div class="option">
-                    <span>Douglas Crockford</span>
-                    <div class="icon cross"><i class="fas fa-times"></i></div>
-                </div>
-                <div class="option">
-                    <span>James Gosling</span>
-                    <div class="icon cross"><i class="fas fa-times"></i></div>
-                </div>
-                <div class="option">
-                    <span>Ryan Dahl</span>
-                    <div class="icon cross"><i class="fas fa-times"></i></div>
-                </div>
-            </div>
-        </section>
+<!-- RESULTS & HIGH SCORES CONTAINER -->
+<section id="AnswerResponse">
+</section>
 
-        <!-- Quiz Box Footer -->
-        <footer>
-            <div class="total_que">
-                <span><p>2</p>Of<p>5</p>Questions</span>
-            </div>
-            <button class="next_btn">Next Que</button>
-        </footer>
+<div id= "game_over" style="display: none">
+    <h2> Game Over</h2>
+    Your Score was: <var id="end_score"> </var>
+    </br>
+    Initials: <input type="text"  value="initials" id="initials">
+    </br>
+    <input type="button" value="submit" id="submit_intials" onclick="submit_score()">
+</div>
+
+<div id="high_scores_page" style="display: none" >
+    <h2> High Scores </h2>
+    <div id="high_scores"></div>
+        <input type="button" value="Go Back" id="go_back" onclick="go_home()">
+        <input type="button" id="Clear Highscores" value ="clear" onclick="clear_hs()">
     </div>
-</body>
-</html>
+
+    <script src="script.js"></script>
+
+</html> 
