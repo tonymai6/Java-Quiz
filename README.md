@@ -13,7 +13,8 @@
 ## Deployed Link: 
 https://tonymai6.github.io/Java-Quiz/
 
-## Screenshot:![coding quiz api](https://user-images.githubusercontent.com/114831060/230697987-afe7bf97-9d3b-4946-90f6-d2e3bf8388c2.jpg)
+## Screenshot:![JavaQuiz](https://user-images.githubusercontent.com/114831060/232663863-754f0c27-586f-4879-81d2-c79615aa7a34.jpg)
+
 
 
 ## Usage
